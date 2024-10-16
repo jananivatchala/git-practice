@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple React Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e91be2;
+            font-family: Arial, sans-serif;
+        }
+        .hello {
+            background: rgb(245, 177, 245);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #320333;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function HelloWorld() {
+            return (
+                <div className="hello">
+                    <h1>Hello, World!</h1>
+                    <p>Welcome to my first React app!</p>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<HelloWorld />, document.getElementById('root'));
+    </script>
+</body>
+</html>
